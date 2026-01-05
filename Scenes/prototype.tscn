@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://clrnywpw6sllu"]
+
+[ext_resource type="Texture2D" uid="uid://b2aihm1ripwcv" path="res://Assets/Misc/Rectangle.svg" id="1_6ox75"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ousu"]
+size = Vector2(91, 166)
+
+[node name="Prototype" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-180, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_6ox75")
+offset = Vector2(0, -420)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0.5, -83)
+shape = SubResource("RectangleShape2D_4ousu")
+
+[node name="Marker2D" type="Marker2D" parent="CharacterBody2D"]
+position = Vector2(68.82, -123.285)
