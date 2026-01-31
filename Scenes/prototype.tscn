@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://clrnywpw6sllu"]
+[gd_scene load_steps=5 format=3 uid="uid://clrnywpw6sllu"]
 
 [ext_resource type="Texture2D" uid="uid://b2aihm1ripwcv" path="res://Assets/Misc/Rectangle.svg" id="1_6ox75"]
+[ext_resource type="Script" uid="uid://cbfxorkskn3h3" path="res://Scripts/marker_2d.gd" id="2_6koui"]
+[ext_resource type="Texture2D" uid="uid://dtk34ykt82ffo" path="res://Assets/Misc/Bow.svg" id="3_3mrnv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ousu"]
 size = Vector2(91, 166)
@@ -21,3 +23,10 @@ shape = SubResource("RectangleShape2D_4ousu")
 
 [node name="Marker2D" type="Marker2D" parent="CharacterBody2D"]
 position = Vector2(68.82, -123.285)
+script = ExtResource("2_6koui")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/Marker2D"]
+scale = Vector2(0.12673077, 0.12673081)
+texture = ExtResource("3_3mrnv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
