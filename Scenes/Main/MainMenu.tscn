@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://c88kltgnvbl1d"]
+
+[ext_resource type="Script" uid="uid://bu8rnpanp5xt6" path="res://Scripts/Utils/MainMenu.gd" id="1_db2sy"]
+
+[node name="MainMenu" type="Node2D" unique_id=609524479]
+script = ExtResource("1_db2sy")
+
+[node name="Main Menu" type="Control" parent="." unique_id=1332589480]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main Menu" unique_id=1405345105]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 179.0
+offset_right = 297.0
+offset_bottom = 495.0
+alignment = 1
+
+[node name="Start Button" type="Button" parent="Main Menu/VBoxContainer" unique_id=1038710252]
+layout_mode = 2
+text = "Start"
+
+[node name="Settings Button" type="Button" parent="Main Menu/VBoxContainer" unique_id=733102911]
+layout_mode = 2
+text = "Settings"
+
+[node name="Quit Button" type="Button" parent="Main Menu/VBoxContainer" unique_id=1720086352]
+layout_mode = 2
+text = "Quit"
+
+[node name="Label" type="Label" parent="Main Menu" unique_id=68760132]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 50.0
+offset_right = 338.0
+offset_bottom = 154.0
+text = "Main Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Main Menu/VBoxContainer/Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Main Menu/VBoxContainer/Settings Button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Main Menu/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]

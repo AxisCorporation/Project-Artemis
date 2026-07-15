@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Project Artemis"
-run/main_scene="uid://b01m2qnbout8c"
+run/main_scene="uid://c88kltgnvbl1d"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
